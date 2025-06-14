@@ -68,6 +68,6 @@ Built with **WinForms (UI), C# (Business Logic), and ADO.NET (Data Access)**, DV
    - .NET Framework 4.7+  
    - SQL Server 2019+ (LocalDB supported)  
 2. **Database Setup**:  
-   - Execute `DVLD_DB_Script.sql` to create tables and seed sample data.  
+   - Download [DVLD-Database.Bak]( https://github.com/Mhadi-1/Driving-Vehicle-License-System/tree/master/MyDVLDPorject/DataBaseBakUp)  DVLD-Database file.  
 3. **Run the App**:  
    - Open `DVLD.sln` in Visual Studio → Build → Run.  

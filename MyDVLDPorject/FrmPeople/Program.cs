@@ -22,7 +22,7 @@ namespace MyDVLDPorject
         /// <summary>
         /// The main entry point for the _application.
         /// </summary>
-        [STAThread]
+       
         static void Main()
         {
             Application.EnableVisualStyles();

@@ -16,7 +16,6 @@ namespace MyMemeoryGame
     public partial class FrmLogin : Form
     {
 
-        
         void SetErrorProvider(Control control, string Message)
         {
             errorProvider1.SetError(control, Message);

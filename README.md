@@ -55,14 +55,6 @@ Built with **WinForms (UI), C# (Business Logic), and ADO.NET (Data Access)**, DV
 ---
 
 
-### **Screenshots (Optional)**  
-*(Add UI screenshots here, e.g.:)*  
-- Application Form  
-- Exam Scheduling Interface  
-- License Issuance Dashboard  
-
----
-
 ### **Setup Guide**  
 1. **Prerequisites**:  
    - .NET Framework 4.7+  

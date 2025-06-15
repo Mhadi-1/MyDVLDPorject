@@ -68,6 +68,36 @@ Built with **WinForms (UI), C# (Business Logic), and ADO.NET (Data Access)**, DV
    - .NET Framework 4.7+  
    - SQL Server 2019+ (LocalDB supported)  
 2. **Database Setup**:  
-   - Download [DVLD-Database.Bak]( https://github.com/Mhadi-1/Driving-Vehicle-License-System/tree/master/MyDVLDPorject/DataBaseBakUp)  DVLD-Database file.  
+   - Download [DVLD-Database.Bak](https://github.com/Mhadi-1/Driving-Vehicle-License-System/tree/master/MyDVLDPorject/Databasebackup)  DVLD-Database Backup file.  
+   **Open SQL Server and Restore The File**      
+   ![2025-06-15_03-18-54](https://github.com/user-attachments/assets/79d9e743-8daf-495a-9d0e-ae4dc28f5828)
+
+
+
 3. **Run the App**:  
-   - Open `DVLD.sln` in Visual Studio → Build → Run.  
+  
+Extract this under a folder name it MyDVLDProject Solution.        
+you will find 3 sub folders as flows:      
+![2025-06-15_03-07-25](https://github.com/user-attachments/assets/98d5eb23-4007-4820-92f9-aa3b3a074444)      
+
+
+the first one is for the presentation layer.  
+the second one is for business layer.  
+the third one is for DataAccess Layer.      
+   
+
+then open the MyDVLDProject folder you will find:      
+         
+![2025-06-15_03-08-07](https://github.com/user-attachments/assets/5a5b831f-4bb2-4536-8a16-fcd8320af68f)      
+
+- Open `MyDVLDProject.sln` in Visual Studio → Build → Run.
+- username: Mhadi10
+- Password : 12345      
+      
+## Short Video      
+      
+
+https://github.com/user-attachments/assets/68c11d2a-afa6-4936-a128-01027f86ce04
+
+
+  

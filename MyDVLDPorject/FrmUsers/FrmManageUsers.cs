@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MyDVLDPorject.FrmUsers
 {
-    public partial class FrmManageUsers : Form
+    public partial class FrmManageUsers : DevExpress.XtraEditors.XtraForm
     {
         public FrmManageUsers()
         {

@@ -113,6 +113,7 @@ namespace MyDVLDPorject.UserCtrls
                       return;
                   }
                 }
+                  user = new clsUser(); 
 
                 if (Saveuser(ref user))
                 {

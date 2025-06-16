@@ -57,6 +57,7 @@
     <Compile Include="ClsProjectSettings.cs" />
     <Compile Include="ClsTestApplicationType.cs" />
     <Compile Include="ClsTestAppointmentsDataAccess.cs" />
+    <Compile Include="clsTestAppointment_2.cs" />
     <Compile Include="ClsTetsDataAccess.cs" />
     <Compile Include="ClsUserDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

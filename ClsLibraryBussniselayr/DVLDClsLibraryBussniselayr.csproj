@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsTestAppointment.cs" />
     <Compile Include="clsApplication.cs" />
     <Compile Include="clsApplicationType.cs" />
     <Compile Include="ClsApplicationTypes.cs" />
@@ -53,7 +54,6 @@
     <Compile Include="ClsLocalDrivingLiceneseApplication.cs" />
     <Compile Include="clsPerson.cs" />
     <Compile Include="ClsProjectSettings.cs" />
-    <Compile Include="ClsTestAppointment.cs" />
     <Compile Include="ClsTests.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

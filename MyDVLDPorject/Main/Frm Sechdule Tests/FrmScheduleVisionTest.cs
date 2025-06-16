@@ -28,5 +28,10 @@ namespace MyDVLDPorject.Frm_Appliciation.Frm_Sechdule_Tests
             ctrlGenralApplicationInfo1.LoadApplicationInfo(_LocalDrivingLicenesID);
             ctrlGenralAppointmentsList1.LoaderAppointmentsListOf(_LocalDrivingLicenesID.Value , (int)ClsGeneral.enTestType.VisitionTest); 
         }
+
+        private void ctrlGenralAppointmentsList1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

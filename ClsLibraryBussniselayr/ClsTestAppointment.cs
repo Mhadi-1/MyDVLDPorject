@@ -98,8 +98,8 @@ namespace ClsLibraryBussniselayr
                     return true; 
                 }
                 return false;
-                //case enMode.Update:
-                //return _Update(); 
+                case enMode.Update:
+                return _Update(); 
             }
             return false; 
         }

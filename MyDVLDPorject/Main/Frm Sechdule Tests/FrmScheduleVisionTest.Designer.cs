@@ -103,6 +103,7 @@
             this.ctrlGenralAppointmentsList1.Name = "ctrlGenralAppointmentsList1";
             this.ctrlGenralAppointmentsList1.Size = new System.Drawing.Size(1029, 364);
             this.ctrlGenralAppointmentsList1.TabIndex = 107;
+            this.ctrlGenralAppointmentsList1.Load += new System.EventHandler(this.ctrlGenralAppointmentsList1_Load);
             // 
             // FrmScheduleVisionTest
             // 

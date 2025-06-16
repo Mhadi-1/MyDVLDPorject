@@ -108,7 +108,7 @@ namespace DVLDClsLibraryDataAccesslyr
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.GetConnectionString()))
                 {
                     string Query = @"insert into TestAppointments
-                           values (@testTypeID , @localDrivingLicenseID , @appointmentDate , @paidFees , @createdUserID , @isLocked)
+                           values (@testTypeID , @localDrivingLicenseID , @appointmentDate , @paidFees , @createdUserID , @isLocked , @retaketeset)
                            select SCOPE_IDENTITY()";
 
                     connection.Open();
@@ -121,6 +121,7 @@ namespace DVLDClsLibraryDataAccesslyr
                         command.Parameters.AddWithValue("@paidFees", paidFees);
                         command.Parameters.AddWithValue("@createdUserID", createdUserID);
                         command.Parameters.AddWithValue("@isLocked", isLocked);
+                        command.Parameters.AddWithValue("@retaketeset", DBNull.Value); 
 
                         object result = command.ExecuteScalar();
 

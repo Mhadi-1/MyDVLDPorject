@@ -1243,5 +1243,8 @@
   <ItemGroup>
     <None Include="Resources\managerelations.svg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_user.svg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

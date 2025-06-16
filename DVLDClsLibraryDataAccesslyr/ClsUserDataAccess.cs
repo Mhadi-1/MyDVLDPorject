@@ -116,7 +116,7 @@ namespace DVLDClsLibraryDataAccesslyr
         {
             DataTable table = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
-            string Query = @"select * from UsersInfo";
+            string Query = @"select * from UsersInfo_View";
 
             SqlCommand command = new SqlCommand(Query , connection); 
             try

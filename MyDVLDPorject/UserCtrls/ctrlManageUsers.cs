@@ -22,19 +22,10 @@ namespace MyDVLDPorject.UserCtrls
             DataTable tbl = new DataTable();
             tbl.Clear();
             tbl = clsUser.GetAllUsers();
-            tbl.Columns.Add("FullName");
-            tbl.Columns.Add("Is Active"); 
-            string FullName = string.Empty;
-            foreach (DataRow Row in tbl.Rows)
-            {
-                FullName = $"{Row["FirstName"]} {Row["SecondName"]} {Row["ThirdName"]} {Row["LastName"]}";
-                Row["FullName"] = FullName;
-                Row["Is Active"] = Row["IsActive"]; 
-
-            }
+           
 
 
-            _UsersTable = tbl.DefaultView.ToTable(false , "UserID" , "FullName" , "Is Active"); 
+            _UsersTable = tbl.DefaultView.ToTable(false , "UserID" , "FullName" , "IsActive"); 
             dgvUser.DataSource = _UsersTable;
 
             if (dgvUser.Rows.Count > 0)
@@ -63,7 +54,7 @@ namespace MyDVLDPorject.UserCtrls
             cmbobxfilteritems.Items.Clear(); 
             foreach (DataColumn column in _UsersTable.Columns)
             {
-                if (column.ColumnName != "FullName" || column.ColumnName != "IsActive.")
+                if (column.ColumnName != "FullName" || column.ColumnName != "IsActive")
                 {
                   cmbobxfilteritems.Items.Add(column.ColumnName.ToString()); 
                 
@@ -135,7 +126,7 @@ namespace MyDVLDPorject.UserCtrls
 
         private void cmbobxfilteritems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbobxfilteritems.Text == "Is Active")
+            if (cmbobxfilteritems.Text == "IsActive")
             {
                 txtbxSearch.Visible = false;
                 cmbxIsActive.Visible = true;

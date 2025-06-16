@@ -56,11 +56,10 @@ namespace MyDVLDPorject.UserCtrls
         }
         private void Show_RefreshDataView()
         {
-            DataTable _dtPeople = clsPerson.GetAllPeople(); 
+            DataTable _dtPeople = clsPerson.GetAllPeople();
             _Table = _dtPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
                                                     "FirstName", "SecondName", "ThirdName", "LastName",
-                                                    "Gendor", "DateOfBirth", "CountryName",
-                                                   "Phone", "Email");
+                                                    "Gender", "DateOfBirth", "CountryName");
             dgvPeople.DataSource = _Table; 
             if (dgvPeople.Rows.Count > 0 )
             {
@@ -94,14 +93,6 @@ namespace MyDVLDPorject.UserCtrls
 
                 dgvPeople.Columns[8].HeaderText = "Nationality";
                 dgvPeople.Columns[8].Width = 120;
-
-
-                dgvPeople.Columns[9].HeaderText = "Phone";
-                dgvPeople.Columns[9].Width = 120;
-
-
-                dgvPeople.Columns[10].HeaderText = "Email";
-                dgvPeople.Columns[10].Width = 170;
 
                 lblDataRecords.Text = "#Record'(s) " + _Table.Rows.Count.ToString();
             }

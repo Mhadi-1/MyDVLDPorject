@@ -164,7 +164,7 @@ namespace DVLDClsLibraryDataAccesslyr
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
-            string query = "SELECT * FROM Drivers_View_2 order by FullName";
+            string query = "SELECT * from Drivers_View order by FullName";
 
             SqlCommand command = new SqlCommand(query, connection);
 

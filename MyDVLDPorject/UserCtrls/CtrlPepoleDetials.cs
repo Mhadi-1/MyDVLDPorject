@@ -4,6 +4,7 @@ using MyDVLDPorject.Frms;
 using System;
 using System.Data;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyDVLDPorject.UserCtrls
@@ -54,15 +55,16 @@ namespace MyDVLDPorject.UserCtrls
              _Table.DefaultView.RowFilter = string.Empty; 
 
         }
-        private void Show_RefreshDataView()
+
+        private async void Show_RefreshDataView()
         {
-            DataTable _dtPeople = clsPerson.GetAllPeople();
-            _Table = _dtPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
-                                                    "FirstName", "SecondName", "ThirdName", "LastName",
-                                                    "Gender", "DateOfBirth", "CountryName");
-            dgvPeople.DataSource = _Table; 
-            if (dgvPeople.Rows.Count > 0 )
+            Task <DataTable> _dtPeople = clsPerson.GetAllPeople();
+
+           
+            _Table = await _dtPeople;
+            if(_Table.Rows.Count > 0 )
             {
+                dgvPeople.DataSource = _Table; 
                 dgvPeople.Columns[0].HeaderText = "Person ID";
                 dgvPeople.Columns[0].Width = 110;
 
@@ -75,7 +77,7 @@ namespace MyDVLDPorject.UserCtrls
 
                 dgvPeople.Columns[3].HeaderText = "Second Name";
                 dgvPeople.Columns[3].Width = 140;
-            
+
 
 
 
@@ -94,14 +96,19 @@ namespace MyDVLDPorject.UserCtrls
                 dgvPeople.Columns[8].HeaderText = "Nationality";
                 dgvPeople.Columns[8].Width = 120;
 
+
+
                 lblDataRecords.Text = "#Record'(s) " + _Table.Rows.Count.ToString();
+
+
+                dgvPeople.EnableHeadersVisualStyles = false;
+                dgvPeople.ColumnHeadersDefaultCellStyle.Font =
+                    new Font("Segoe UI", 11, FontStyle.Bold);
+                dgvPeople.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+                dgvPeople.ColumnHeadersDefaultCellStyle.ForeColor = Color.DarkBlue;
             }
 
-            dgvPeople.EnableHeadersVisualStyles = false;
-            dgvPeople.ColumnHeadersDefaultCellStyle.Font =
-                new Font("Segoe UI", 11, FontStyle.Bold);
-            dgvPeople.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
-            dgvPeople.ColumnHeadersDefaultCellStyle.ForeColor = Color.DarkBlue;
+               
 
         }
 

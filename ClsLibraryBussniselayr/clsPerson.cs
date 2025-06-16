@@ -1,7 +1,8 @@
 ﻿
 using System.Data;
 using System;
-using DVLDClsLibraryDataAccesslyr; 
+using DVLDClsLibraryDataAccesslyr;
+using System.Threading.Tasks;
 namespace ClsLibraryBussniselayr
 {
     public class clsPerson : clsCountries
@@ -128,8 +129,9 @@ namespace ClsLibraryBussniselayr
             }
             return false; 
         }
-        public static DataTable GetAllPeople()
+        public static async Task <DataTable> GetAllPeople()
         {
+          
             return clsPepoleDataAccess.GetAllPepole(); 
         }
         public static bool IsNationalNoExit(string NationalNo)

@@ -71,7 +71,7 @@ namespace MyDVLDPorject.Frm_Appliciation.Frm_Sechdule_Tests.UsrControls
             }
         }
 
-        public void LoadTestInfo(int LocalLicenesApplicationID, ClsGeneral.enTestType testType)
+        public async void LoadTestInfo(int LocalLicenesApplicationID, ClsGeneral.enTestType testType)
         {
 
 
@@ -79,16 +79,17 @@ namespace MyDVLDPorject.Frm_Appliciation.Frm_Sechdule_Tests.UsrControls
             if(TestAppointment != null)
             {
                 ClsLocalDrivingLiceneseApplication liceneseApplication = ClsLocalDrivingLiceneseApplication.FindLocalDrivingLicense(LocalLicenesApplicationID);
-                ClsLicenseClass licenseClass = ClsLicenseClass.GetLicenseClass(liceneseApplication.LicenseClassID);
                 clsApplication _application = clsApplication.FindApplication(liceneseApplication.ApplicationID);
                 clsPerson person = clsPerson.FindByID(_application.ApplicationpersonID);
+                ClsLicenseClass licenseClass = ClsLicenseClass.GetLicenseClass(liceneseApplication.LicenseClassID);
                 
                 lblLocalDrivingLicenseAppID.Text = LocalLicenesApplicationID.ToString();
                 lblDrivingClass.Text             = licenseClass.ClassName;
-                lblFullName.Text                 = person.FullName;
                 lblTrial.Text = liceneseApplication.CountOfTestTotalTrial(liceneseApplication.LocalDrivingLicenseApplicationID, (int)testType).ToString();
                 lblDate.Text  = TestAppointment.AppointmentDate.ToShortDateString();
                 lblFees.Text  = TestAppointment.PaidFees.ToString(); 
+                
+                lblFullName.Text  = person.FullName;
 
 
             }

@@ -28,9 +28,9 @@ namespace MyDVLDPorject.UserCtrls
             }
         }
 
-        public void ShowDetails(int ID)
+        public async void ShowDetails(int ID)
         {
-             person = clsPerson.FindByID(ID);
+             person =  clsPerson.FindByID(ID);
             if (person != null)
             {
                 lblPersonID.Text    = person.ID.ToString();

@@ -33,23 +33,25 @@ namespace MyDVLDPorject.Frm_Appliciation.Frm_Sechdule_Tests.UsrControls
             return string.Empty; 
         }
 
-        public void LoadApplicationInfo(int LocalDrivingApplicationID)
+        public async void LoadApplicationInfo(int LocalDrivingApplicationID)
         {
             ClsLocalDrivingLiceneseApplication LocalDriving =  ClsLocalDrivingLiceneseApplication.FindLocalDrivingLicense(LocalDrivingApplicationID);
             _application = clsApplication.FindApplication(LocalDriving.ApplicationID);
             if(LocalDriving != null)
             {
+                clsPerson person = clsPerson.FindByID(_application.ApplicationpersonID);
+
                 lblApplicationID.Text = _application.ApplicationID.ToString();
                 lblStatus.Text = _ConvertApplicationStatus(_application.ApplicationStatus);
                 lblFees.Text = _application.PaidFees.ToString();
                 ClsApplicationTypes applicationtype = ClsApplicationTypes.GetApplicationTypeByID(_application.ApplicationTypeID);
                 lblType.Text = applicationtype.ApplicationTitle;
-                clsPerson person = clsPerson.FindByID(_application.ApplicationpersonID);
-                lblApplicant.Text = person.FullName;
                 lblDate.Text = _application.ApplicationDate.ToShortDateString();
                 lblStatusDate.Text = _application.LastAppicationDate.ToShortDateString();
                 lblCreatedByUser.Text = clsUser.GetUserName(_application.CreatedUserID);
-               
+                
+                lblApplicant.Text = person.FullName;
+
             }
         }
 

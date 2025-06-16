@@ -147,7 +147,7 @@ namespace MyDVLDPorject.Frm_Appliciation.Frm_Sechdule_Tests.UsrControls
             }
         }
 
-        public void LoadTesAppointmenttInfo(int LocalLicenesApplicationID , ClsGeneral.enTestType testType)
+        public async void LoadTesAppointmenttInfo(int LocalLicenesApplicationID , ClsGeneral.enTestType testType)
         {
 
             _LocalDrivingLicenseID = LocalLicenesApplicationID;

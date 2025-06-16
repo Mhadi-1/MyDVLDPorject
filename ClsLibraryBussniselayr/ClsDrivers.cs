@@ -48,7 +48,8 @@ namespace ClsLibraryBussniselayr
             this.PersonID = personID;
             this.CreatedUserID = createdUserID;
             this.CreatedDate = createdDate;
-            this.PersonInfo = clsPerson.FindByID(personID.Value);
+
+            this.PersonInfo = clsPerson.FindByID(PersonID.Value);
             Mode = enMode.Update; 
         }
 
@@ -63,6 +64,7 @@ namespace ClsLibraryBussniselayr
 
             if (ClsDriversDataAccess.FindDriver(ref driverID , PersonID , ref createdbyUserID , ref createdate))
             {
+               
                 return new ClsDrivers(driverID, PersonID, createdbyUserID, createdate); 
             }
             return null; 
@@ -74,6 +76,7 @@ namespace ClsLibraryBussniselayr
 
             if (ClsDriversDataAccess.Find(ref DriverID,ref PersonID, ref createdbyUserID, ref createdate))
             {
+               
                 return new ClsDrivers(DriverID, PersonID, createdbyUserID, createdate);
             }
             return null;

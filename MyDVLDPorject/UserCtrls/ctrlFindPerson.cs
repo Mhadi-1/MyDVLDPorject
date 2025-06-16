@@ -75,11 +75,12 @@ namespace MyDVLDPorject.UserCtrls
                 PersonPicturename = ImagePath;  
             }
         }
-        private void _GetPeronsDetails()
+        private async void _GetPeronsDetails()
         {
            
-            person = clsPerson.FindByID(PersonID); 
-            if(person != null)
+            person = clsPerson.FindByID(PersonID);
+          
+            if (person != null)
             {
                 lblPersonID.Text = person.ID.ToString();
                 TxtBxNationalNo.Text = person.NationalNo;

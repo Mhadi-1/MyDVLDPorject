@@ -36,11 +36,11 @@ namespace MyDVLDPorject.UserCtrls
             rdobtnFemale.Enabled = true; ;
             rdobtnMale.Enabled = false;
         }
-        public void LoadPersonInfo(int ID = 0)
+        public async void LoadPersonInfo(int ID = 0)
         {
             if(ID > 0 )
             {
-               person = clsPerson.FindByID(ID);
+               person =  clsPerson.FindByID(ID);
             }
             if (person != null)
             {
